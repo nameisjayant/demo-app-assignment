@@ -21,7 +21,6 @@ class HomeViewModel : ViewModel() {
         try {
             val data = RetrofitBuilder.apiService.getHome()
             _result.value = data
-            Log.d("main", "${data.availableProducts[0].price}")
         } catch (e: Exception) {
             e.printStackTrace()
             Log.d("main", "getHome: ${e.message}")

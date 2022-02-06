@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
         lifecycleScope.launchWhenStarted {
             viewmodel.result.collect {
-                homeAdapter.submitList(it.availableProducts)
-                Log.d("main", "${it.availableProducts[0].price}")
+                homeAdapter.submitList(it.workDetails.availableProducts)
+                Log.d("main", "${it.workDetails.availableProducts[0].price}")
                 binding.progressBar.visibility = View.GONE
                 binding.recyclerView.visibility = View.VISIBLE
             }

@@ -5,7 +5,13 @@ data class Home(
 ) {
 
     data class WorkDetails(
-        val availableProducts: List<AvailableProducts>
+        val availableProducts: List<AvailableProducts>,
+        val id: String,
+        val artist:Artist
+    )
+
+    data class Artist(
+        val id:String
     )
 
     data class AvailableProducts(
@@ -19,3 +25,6 @@ data class Home(
         val amount: Double
     )
 }
+
+
+
